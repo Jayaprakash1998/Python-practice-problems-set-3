@@ -99,24 +99,13 @@ HINTS:
 
 # ANSWER:
 
-#include <stdio.h>
-
-int main()
-{
-    long long int n,k;
-   scanf("%lld",&n);
-   scanf("%lld",&k);
-	long long int m=1;
-		long long int ans=0;
-		while(m<=n){
-			m*=2;}
-			m=m/2;
-			ans=(n-m)*2 + k;
-		if(ans>n){
-			printf("%lld",ans%n);
-		}
-		else
-			printf("%lld",ans);
-
-    return 0;
-}
+n,k=map(int,input().split())
+m=1
+while(m<=n):
+	m*=2
+m//=2
+ans=(n-m)*2+k
+if ans>n:
+	print(ans%n)
+else:
+	print(ans)
